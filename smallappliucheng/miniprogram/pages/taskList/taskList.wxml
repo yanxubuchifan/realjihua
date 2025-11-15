@@ -1,0 +1,65 @@
+<!-- pages/taskList/taskList.wxml -->
+<navigation-bar title="全部任务列表" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <!-- 任务筛选栏 -->
+    <view class="filter-bar">
+      <view class="filter-item {{currentFilter === 'all' ? 'active' : ''}}" bindtap="changeFilter" data-type="all">
+        全部
+      </view>
+      <view class="filter-item {{currentFilter === 'pending' ? 'active' : ''}}" bindtap="changeFilter" data-type="pending">
+        待处理
+      </view>
+      <view class="filter-item {{currentFilter === 'processing' ? 'active' : ''}}" bindtap="changeFilter" data-type="processing">
+        处理中
+      </view>
+      <view class="filter-item {{currentFilter === 'completed' ? 'active' : ''}}" bindtap="changeFilter" data-type="completed">
+        已完成
+      </view>
+    </view>
+
+    <!-- 任务列表 -->
+    <view class="task-list">
+      <block wx:for="{{filteredTasks}}" wx:key="id" wx:for-item="task">
+        <view class="task-item" bindtap="goToTaskDetail" data-id="{{task.id}}">
+          <!-- 任务标题和优先级 -->
+          <view class="task-header">
+            <view class="task-title">{{task.title}}</view>
+            <view class="task-priority" style="background-color: {{task.priority.color}}">
+              {{task.priority.text}}
+            </view>
+          </view>
+
+          <!-- 任务详情 -->
+          <view class="task-details">
+            <view class="task-dept">
+              <text class="label">部门：</text>
+              <text class="value">{{task.department}}</text>
+            </view>
+            <view class="task-assignee">
+              <text class="label">负责人：</text>
+              <text class="value">{{task.assignee}}</text>
+            </view>
+          </view>
+
+          <!-- 任务状态和截止日期 -->
+          <view class="task-footer">
+            <view class="task-status" style="color: {{task.status.color}}">
+              {{task.status.text}}
+            </view>
+            <view class="task-deadline">
+              <text class="label">截止：</text>
+              <text class="value">{{task.deadline}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      
+      <!-- 空状态提示 -->
+      <view wx:if="{{filteredTasks.length === 0}}" class="empty-state">
+        <view class="empty-icon">📋</view>
+        <view class="empty-text">暂无任务</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,61 +1,80 @@
-/**index.less**/
-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 .scrollarea {
-  flex: 1;
-  overflow-y: hidden;
+  height: 100vh;
+  width: 100%;
 }
 
-.userinfo {
+.container {
+  padding: 20px;
+  background-color: #f7f8fa;
+  min-height: 100%;
+  position: relative;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px; /* 减小标题下方间距 */
+  padding-left: 8px;
+  border-left: 4px solid #3578e5;
+}
+
+.department-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #aaa;
-  width: 80%;
+  gap: 12px; /* 减小部门项之间的间距 */
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-.avatar-wrapper {
-  padding: 0;
-  width: 56px !important;
-  border-radius: 8px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.avatar {
-  display: block;
-  width: 56px;
-  height: 56px;
-}
-
-.nickname-wrapper {
+.department-item {
   display: flex;
-  width: 100%;
-  padding: 16px;
-  box-sizing: border-box;
-  border-top: .5px solid rgba(0, 0, 0, 0.1);
-  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
-  color: black;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px 20px; /* 略微减小内边距 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-color: rgba(53, 120, 229, 0.3);
+  }
 }
 
-.nickname-label {
-  width: 105px;
+.dept-icon {
+  width: 52px; /* 略微减小图标大小 */
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px; /* 减小图标与文字间距 */
+  
+  .icon-text {
+    color: #fff;
+    font-size: 18px; /* 略微减小图标文字大小 */
+    font-weight: bold;
+  }
 }
 
-.nickname-input {
+.dept-info {
   flex: 1;
+  
+  .dept-name {
+    font-size: 17px; /* 略微减小部门名称字体大小 */
+    font-weight: 500;
+    color: #333;
+  }
+}
+
+.decorative-element {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, rgba(53, 120, 229, 0.05), rgba(7, 193, 96, 0.05));
+  border-radius: 50% 0 0 0;
+  z-index: 0;
 }

@@ -1,4 +1,5 @@
 // app.ts
+// 主色#22a4ff
 App<IAppOption>({
   globalData: {},
   onLaunch() {

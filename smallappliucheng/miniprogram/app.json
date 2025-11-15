@@ -1,11 +1,14 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/taskList/taskList",
     "pages/logs/logs"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin"
   },
   "style": "v2",
   "rendererOptions": {
@@ -18,5 +21,25 @@
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#3578e5",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "部门列表",
+        "iconPath": "images/icon-department.png",
+        "selectedIconPath": "images/icon-department-active.png"
+      },
+      {
+        "pagePath": "pages/taskList/taskList",
+        "text": "任务列表",
+        "iconPath": "images/icon-task.png",
+        "selectedIconPath": "images/icon-task-active.png"
+      }
+    ]
+  },
   "lazyCodeLoading": "requiredComponents"
 }
