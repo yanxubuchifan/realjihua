@@ -3,20 +3,7 @@
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
     <!-- 任务筛选栏 -->
-    <view class="filter-bar">
-      <view class="filter-item {{currentFilter === 'all' ? 'active' : ''}}" bindtap="changeFilter" data-type="all">
-        全部
-      </view>
-      <view class="filter-item {{currentFilter === 'pending' ? 'active' : ''}}" bindtap="changeFilter" data-type="pending">
-        待处理
-      </view>
-      <view class="filter-item {{currentFilter === 'processing' ? 'active' : ''}}" bindtap="changeFilter" data-type="processing">
-        处理中
-      </view>
-      <view class="filter-item {{currentFilter === 'completed' ? 'active' : ''}}" bindtap="changeFilter" data-type="completed">
-        已完成
-      </view>
-    </view>
+   
 
     <!-- 任务列表 -->
     <view class="task-list">

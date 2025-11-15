@@ -1,10 +1,9 @@
-<!--index.wxml-->
+<!-- pages/index/index.wxml -->
+<!-- 1. 将导航栏放在最外层 -->
 <navigation-bar title="部门列表" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<!-- 2. scroll-view 只包裹需要滚动的内容 -->
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-    <!-- 页面标题 -->
-    <!-- <view class="page-title">组织机构</view> -->
-    
     <!-- 部门列表 -->
     <view class="department-list">
       <block wx:for="{{departments}}" wx:key="id" wx:for-item="dept">
@@ -19,8 +18,5 @@
         </view>
       </block>
     </view>
-    
-    <!-- 装饰元素 -->
-    <view class="decorative-element"></view>
   </view>
 </scroll-view>
