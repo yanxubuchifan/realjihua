@@ -12,9 +12,7 @@ App<IAppOption>({
       const pages = getCurrentPages()
       
       if (pages.length > 0 && pages[0].route === 'pages/login/login') {
-        wx.redirectTo({
-          url: '/pages/index/index'
-        })
+
       }
     }
     // 展示本地存储能力

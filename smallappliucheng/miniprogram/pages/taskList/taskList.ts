@@ -118,10 +118,6 @@ Component({
         title: `查看任务 ID: ${taskId}`,
         icon: 'none'
       });
-      // 示例跳转代码：
-      // wx.navigateTo({
-      //   url: `/pages/taskDetail/taskDetail?id=${taskId}`
-      // });
     }
   }
 })  
