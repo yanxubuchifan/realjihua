@@ -1,0 +1,10 @@
+<!--pages/coming/coming.wxml-->
+<view class="ad-container">
+  <!-- 广告图片 -->
+  <image class="ad-image" src="/images/ad2.png" mode="aspectFill"></image>
+  
+  <!-- 倒计时按钮 -->
+  <view class="countdown-btn" bindtap="tonext">
+    跳过 {{countdown}}s
+  </view>
+</view>

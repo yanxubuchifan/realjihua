@@ -1,14 +1,15 @@
 {
   "pages": [
+    "pages/coming/coming",
+    "pages/logina/logina",
+    "pages/login/login",
     "pages/index/index",
     "pages/taskList/taskList",
     "pages/logs/logs"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "张琪流程"
+    "navigationStyle": "custom"
   },
   "style": "v2",
   "rendererOptions": {
@@ -25,7 +26,6 @@
     "color": "#999",
     "selectedColor": "#3578e5",
     "backgroundColor": "#ffffff",
-    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",

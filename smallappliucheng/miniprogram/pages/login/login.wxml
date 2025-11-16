@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<navigation-bar title="登录" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+  <view class="login-box">
+    <image class="logo" src="/images/logo.png" mode="widthFix"></image>
+    <view class="title">欢迎使用小程序</view>
+    
+    <button 
+      class="login-btn" 
+      wx:if="{{canIUseGetUserProfile}}" 
+      bindtap="handleLogin"
+    >
+      微信快捷登录
+    </button>
+    
+    
+    <view wx:else>请升级微信版本以使用登录功能</view>
+  </view>
+  <button bind:tap="tiaozhuan">跳转</button>
+</view>
